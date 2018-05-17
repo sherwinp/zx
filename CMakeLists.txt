@@ -5,6 +5,7 @@ enable_language(CXX)
 set (CMAKE_CXX_STANDARD 11)
 
 find_package(OpenGL REQUIRED)
+find_package(glfw3)
 
 include_directories( /usr/local/include/epoxy )
 include_directories( shell )
@@ -25,5 +26,5 @@ set( HEADER_FILES
 
 add_executable( ZX ${SOURCES} ${HEADER_FILES} )
 
-target_link_libraries( ZX  GL ${EPOXY_LIBRARIES} glfw3 X11 pthread dl stdc++)
+target_link_libraries( ZX  GL ${EPOXY_LIBRARIES} glfw X11 pthread dl stdc++)
 
